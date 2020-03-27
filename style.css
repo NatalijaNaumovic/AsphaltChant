@@ -75,10 +75,6 @@ textarea[type=text]:focus{
 	left: 20px;
 }
 
-.mess{
-
-}
-
 .card{
 	background: rgba(0, 0, 0, 0.65);
 	margin-bottom: 5vh;
@@ -117,13 +113,13 @@ textarea[type=text]:focus{
 	text-align: center;
 }
 
-.new{
-	border: 10px solid rgba(49, 22, 148,0.2);
+.card{
+	border: 5px solid rgba(108,117,125,0.2);
 	border-radius: 0.8rem; 
 }
 
 .pic{
-	border-bottom: 10px solid rgba(49, 22, 148,0.2);
+	border-bottom: 5px solid rgba(108,117,125,0.2);
 }
 
 .nbar2{
