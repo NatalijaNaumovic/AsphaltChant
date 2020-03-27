@@ -20,13 +20,15 @@ body:before {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -10;
   background: url("sajtpoz3.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ /* background-size: contain;*/
+  background-position: center;
 }
 /*hr{
 	margin-bottom: 0;
@@ -44,6 +46,16 @@ a{
 a:hover{
  	color: lightgray;
  	text-decoration: none;
+}
+input[type=text]:focus{
+  background-color: rgba(33, 39, 46,0.8);
+  outline: 3px solid #311694;
+  color:white;
+}
+textarea[type=text]:focus{
+  background-color: rgba(33, 39, 46,0.8);
+  outline: 3px solid #311694;
+  color:white;
 }
 
 #title{
@@ -63,8 +75,13 @@ a:hover{
 	left: 20px;
 }
 
-#biography{
+.mess{
+
+}
+
+.card{
 	background: rgba(0, 0, 0, 0.65);
+	margin-bottom: 5vh;
 }
 
 .active{
@@ -73,14 +90,16 @@ a:hover{
 .container{
 	margin-bottom:6rem;
 }
-.card{
-/* 	color:black;
-*/	margin-bottom: 5%;
-/*	background: rgba(0, 0, 0, 0.65);*/
-}
 
 .newss{
 	margin-top: 2vh;
+}
+
+.inp{
+	color: #fff;
+	background-color:rgba(33, 39, 46);
+	background: rgba(33, 39, 46,0.8); 
+	border-color: #6c757d;
 }
 
 .nbar{
@@ -97,8 +116,14 @@ a:hover{
 .naslov{
 	text-align: center;
 }
-.news{
-	color: black;
+
+.new{
+	border: 10px solid rgba(49, 22, 148,0.2);
+	border-radius: 0.8rem; 
+}
+
+.pic{
+	border-bottom: 10px solid rgba(49, 22, 148,0.2);
 }
 
 .nbar2{
@@ -107,7 +132,6 @@ a:hover{
 	margin-bottom: 0.5rem;
 	padding-top: 1rem;
 	margin-top: 0.5rem;
-	font-size: 21px;
 	background-color: black !important; 
 	background: rgba(0, 0, 0, 0.8)!important;
 }
@@ -120,13 +144,6 @@ a:hover{
 	left:0;
 	width: 100%;
 }
-
-/*.picture {
- height: 300px;
- width: 400px;
- overflow: hidden;
-}
-*/
 
 .img-thumbnail{
 	width: 100%;
@@ -144,7 +161,9 @@ a:hover{
 #image-gallery .modal-footer{
   display: block;
 }
-
+.card-title{
+	font-size: 25px;
+}
 .thumb{
   margin-top: 8px;
   margin-bottom: 8px;
@@ -162,10 +181,13 @@ a:hover{
 .modal-footer{
 	border-top:none;
 }
+
 .btn{
 	font-size: 1.14rem;
+	color: #fff;
 	background-color:rgba(33, 39, 46);
 	background: rgba(33, 39, 46,0.8); 
+	border-color: #6c757d;
 }
 .close{
 	color:white !important;
@@ -176,6 +198,9 @@ a:hover{
 	margin-right: 1.2rem;
 	margin-top: 0.8rem;
 }
+.req{
+	color:red;
+}
 
 @media (max-width:991.98px){
     hr{
@@ -183,9 +208,7 @@ a:hover{
     }
     body{
     	font-size: 37px;
-    	background-attachment: initial;
     }
-
     .model-content{
     	display: none !important;
     }
@@ -200,6 +223,14 @@ a:hover{
     .card-title{
     	font-size: 33px;
     }
-
+    .inp{
+    	font-size: 35px;
+    }
+    .btn-primary{
+    	font-size: 35px;
+    }
+    .forma{
+    	margin-bottom: 6rem;
+    }
 }
 
