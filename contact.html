@@ -7,9 +7,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-
+	<div id="logoMali" class="d-sm-none d-lg-inline d-none">
+		<img src="logoM1.png" alt="logoM1" width="420px">
+	</div>
 	<div class="nbar1 d-lg-flex d-sm-none d-none flex-row-reverse bd-highlight">	
 		<div>	
 			<a href="indexS.html">
@@ -21,10 +24,7 @@
 					<img border="0" alt="Engleski" src="engleska.png" with="40" height="40"> 
 			</a>
 		</div>
-	</div>
-	<div id="logoMali" class="d-sm-none d-lg-inline d-none">
-		<img src="logoM1.png" alt="logoM1" width="420px">
-	</div>
+	</div>	
 	<div class="container">
 		<div id="title">
 			<img src="logostari.png" width="530px">
@@ -71,18 +71,18 @@
 			</div>
 			<div class="col-lg-7  col-sm-12 forma">
 
-				<form>
+				<form id="emailForm">
 					<div class="form-row">
 						<div class="col-lg-6 mb-3">
-							<label for="validationServer01">Name</label>
-							<input type="text" class="inp form-control" id="validationServer01" placeholder="Required" required>
+							<label for="name">Name</label>
+							<input type="text" class="inp form-control" id="name" placeholder="Required" required>
 							<div class="invalid-feedback">
 								Please insrert your name!
 							</div>
 						</div>
 						<div class="col-lg-6 mb-3">
-							<label for="validationServer02">E-mail</label>
-							<input type="text" class="inp form-control" id="validationServer02" placeholder="Required" required>
+							<label for="email">E-mail</label>
+							<input type="text" class="inp form-control" id="email" placeholder="Required" required>
 							<div class="invalid-feedback">
 								Please insrert your e-mail!
 							</div>
@@ -93,13 +93,13 @@
 							<input type="text" class="inp form-control" id="subject" placeholder="Not Required">
 					</div>
 					<div class="mb-4">
-					    <label for="validationTextarea">Message</label>
-					    <textarea type="text" class="mess inp form-control" id="validationTextarea" placeholder="Required" required></textarea>
+					    <label for="message">Message</label>
+					    <textarea type="text" class="mess inp form-control" id="message" placeholder="Required" required></textarea>
 					    <div class="invalid-feedback">
 					      Please enter a message in the textarea.
 					    </div>
 					</div>    
-					<button class="btn btn-primary" type="submit">Send</button>
+					<button class="btn btn-primary" id="submit" type="submit">Send</button>
 				</form>
 			</div>
 		
@@ -148,6 +148,17 @@
         $('.mess').css({
             'height': cw + 'px'
         });
+    </script>
+    <script>
+    	let form = document.getElementById('emailForm');
+    	form.addEventListener('submit',(e)=>{
+    		e.preventDefault();
+    		let name = document.getElementById('name').value;
+    		let email = document.getElementById('email').value;
+    		let subject = document.getElementById('subject').value;
+    		let message = document.getElementById('message').value;
+    		console.log(email)
+    	})
     </script>
 </body>
 
